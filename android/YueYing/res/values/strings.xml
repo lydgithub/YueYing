@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">YueYing</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_tv_createA_title">发起观影</string>
+    <string name="str_createA_rbGenderMan">男生</string>
+    <string name="str_createA_tv_Genger">约影对象</string>
+    <string name="str_createA_gender_woman">女生</string>
+    <string name="str_createA_gender_both">不限</string>
+    <string name="str_createA_tv_Time">时间</string>
+    <string name="str_createA_btn_create">发布</string>
+    <string name="str_createA_tv_film">电影</string>
+    <string name="str_createA_tv_location">地点</string>
+    <string name="str_createA_tv_specification">说明</string>
+    <string name="str_radio_Man">男生</string>
+    <string name="str_radio_Woman">女生</string>
+    <string name="str_radio_Both">不限</string>
+
+</resources>
