@@ -8,7 +8,7 @@ by 3+2
 
 2、android目录内放置app开发文件,server目录内放置后台开发文件
 
-3、每个人提交时，提交到mirror分支，不要直接提交到master
+3、每个人提交时，直接提交到master
 
 4、Eclipse使用EGit提交时，Commit message 中按格式“前台/后台 时间（年月日时分）  提交人员 修改的内容（为方便查阅，请详细填写）”
 
