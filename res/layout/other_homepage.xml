@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_2" >
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="top"
+        android:background="@drawable/bg_1"
+        android:columnCount="1" >
+
+        <TextView
+            android:id="@+id/textViewtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_row="0"
+            android:text="小小鸟"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:text="返回"
+            android:textColor="#ffffffff" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:layout_gravity="top"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF"
+        android:columnCount="1" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/u55_normal" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_row="0"
+            android:text="22岁" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_row="0"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_1" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="70dp"
+            android:layout_row="0"
+            android:text="喜剧、爱情" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_column="0"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="150dp"
+            android:layout_row="0"
+            android:text="167cm" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:src="@drawable/u55_normal" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:src="@drawable/u55_normal" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:src="@drawable/u55_normal" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="90dp"
+            android:layout_row="0"
+            android:src="@drawable/u55_normal" />
+
+    </GridLayout>
+    <ScrollView android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_weight="1">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/bg_2" >
+
+            <GridLayout
+                android:layout_width="fill_parent"
+                android:layout_height="144dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_2"
+                android:columnCount="1" >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="正在发起的约会"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="71dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="参加过的约会"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="right|top"
+                    android:layout_row="0"
+                    android:background="@drawable/bg_2"
+                    android:src="@drawable/jiantou_3" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="right|top"
+                    android:layout_marginTop="71dp"
+                    android:layout_row="0"
+                    android:background="@drawable/bg_2"
+                    android:src="@drawable/jiantou_3" />
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="详细资料"
+                android:textSize="20sp" />
+
+            <GridLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_2"
+                android:columnCount="1" >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="top"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="身高"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="71dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="体重"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="142dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="职业"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="213dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="工作地区"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="284dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="婚姻状况"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="355dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="个性签名"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="100dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="20dp"
+                    android:text="167cm"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="71dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="20dp"
+                    android:text="60g"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="142dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="20dp"
+                    android:text="商业/服务业/个体经济"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="213dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="20dp"
+                    android:text="北京 朝阳"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="284dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="20dp"
+                    android:text="已婚"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="355dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="right"
+                    android:paddingRight="20dp" />
+
+            </GridLayout>
+
+        </TableLayout>
+
+    </ScrollView>
+    <RadioGroup
+        android:id="@+id/main_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/nearby_activities"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_home_btn_bg"
+            android:button="@null"
+            android:checked="true"
+            android:tag="home" />
+
+        <RadioButton
+            android:id="@+id/find_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_home_btn_bg"
+            android:button="@null"
+            android:tag="cart" />
+
+        <RadioButton
+            android:id="@+id/manage"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_home_btn_bg"
+            android:button="@null"
+            android:tag="personal" />
+
+        <RadioButton
+            android:id="@+id/home"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_home_btn_bg"
+            android:button="@null"
+            android:tag="more" />
+    </RadioGroup>
+
+</TableLayout>

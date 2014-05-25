@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_2" >
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="top"
+        android:background="@drawable/bg_1"
+        android:columnCount="1" >
+
+        <TextView
+            android:id="@+id/textViewtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_row="0"
+            android:text="我的主页"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/button2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_column="0"
+            android:layout_gravity="right|top"
+            android:layout_row="0"
+            android:text="设置"
+            android:textColor="#ffffffff" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="top"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF"
+        android:columnCount="1" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="100dp"
+            android:layout_gravity="left|top|bottom"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/u55_normal" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_column="0"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:text="最近的我最远的你"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="0"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_row="0"
+            android:text="一起来看电影吧" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="45dp"
+            android:layout_row="0"
+            android:text="22岁" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="45dp"
+            android:layout_row="0"
+            android:text="女生" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="0"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="45dp"
+            android:layout_row="0"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_1" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_column="0"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="40dp"
+            android:layout_row="0"
+            android:text="喜剧、爱情" />
+
+    </GridLayout>
+    <ScrollView android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_weight="1">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/bg_2" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="我的约影"
+                android:textSize="20sp" />
+
+            <GridLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_2"
+                android:columnCount="1" >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="我发起的"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="71dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="我参与的"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="142dp"
+                    android:layout_row="0"
+                    android:background="#FFFFFF"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="我报名的"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="right|top"
+                    android:layout_row="0"
+                    android:background="@drawable/bg_2"
+                    android:src="@drawable/jiantou_3" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="right|top"
+                    android:layout_marginTop="71dp"
+                    android:layout_row="0"
+                    android:background="@drawable/bg_2"
+                    android:src="@drawable/jiantou_3" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_gravity="right|top"
+                    android:layout_marginTop="142dp"
+                    android:layout_row="0"
+                    android:background="@drawable/bg_2"
+                    android:src="@drawable/jiantou_3" />
+
+            </GridLayout>
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="我的过客"
+                android:textSize="20sp" />
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:columnCount="1" >
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_gravity="left|top"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_row="0"
+                    android:src="@drawable/u20_normal" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_gravity="left|top"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_row="0"
+                    android:src="@drawable/u20_normal" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_gravity="left|top"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_row="0"
+                    android:src="@drawable/u20_normal" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:layout_gravity="left|top"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_row="0"
+                    android:src="@drawable/u20_normal" />
+
+                <ImageView
+                    android:id="@+id/moreimg"
+                    android:layout_width="40dp"
+                    android:layout_height="15dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_row="0"
+                    android:src="@drawable/jiantou_2" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_column="0"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_row="0"
+                    android:text="更多" />
+
+            </GridLayout>
+
+        </TableLayout>
+
+    </ScrollView>
+    <RadioGroup
+        android:id="@+id/main_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/nearby_activities"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_home_btn_bg"
+            android:button="@null"
+            android:checked="true"
+            android:tag="home" />
+
+        <RadioButton
+            android:id="@+id/find_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_home_btn_bg"
+            android:button="@null"
+            android:tag="cart" />
+
+        <RadioButton
+            android:id="@+id/manage"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_home_btn_bg"
+            android:button="@null"
+            android:tag="personal" />
+
+        <RadioButton
+            android:id="@+id/home"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_home_btn_bg"
+            android:button="@null"
+            android:tag="more" />
+    </RadioGroup>
+
+</TableLayout>
