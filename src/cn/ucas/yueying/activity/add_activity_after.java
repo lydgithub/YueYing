@@ -2,13 +2,17 @@ package cn.ucas.yueying.activity;
 
 import cn.ucas.yueying.R;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class add_activity_after extends Activity{
 	Button faqi;
@@ -27,7 +31,6 @@ public class add_activity_after extends Activity{
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
 				intent.setClass(add_activity_after.this, changci.class);
-				
 				startActivity(intent);
 				finish();
 				
@@ -49,6 +52,10 @@ public class add_activity_after extends Activity{
 			}
 		});
 	}
+	
+
+	
+	
 	public boolean onKeyDown(int keyCode, android.view.KeyEvent event) {
 
 		super.onKeyDown(keyCode, event);
