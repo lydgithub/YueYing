@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp" >
+    
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:columnCount="1" >
+
+                <ImageView
+                    android:id="@+id/manage_img"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_column="0"
+                    android:layout_gravity="top"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_row="0"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_1" />
+
+                <TextView
+                    android:id="@+id/manage_title"
+                    android:layout_column="0"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_row="0"
+                    android:text="系统秘书"
+                    android:textColor="#FFFFFFFF" />
+
+                <TextView
+                    android:id="@+id/manage_time"
+                    android:layout_column="0"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_row="0"
+                    android:text="10:34"
+                    android:textColor="#FFFFFFFF" />
+
+                <TextView
+                    android:id="@+id/manage_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="0"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_row="0"
+                    android:text="恭喜您获得一个信用奖励！明天来登录还可以获得哦"
+                    android:textColor="#FFFFFFFF" />
+
+            </GridLayout>
+    
+
+</RelativeLayout>

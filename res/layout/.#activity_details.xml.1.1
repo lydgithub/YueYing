@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+    
+<GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="top"
+        android:background="@drawable/bg_1"
+        android:columnCount="1" >
+
+        <Button
+            android:id="@+id/btn_location"
+            android:layout_width="60dp"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:alpha="1"
+            android:background="@drawable/bg_1"
+            android:text="返回"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_row="0"
+            android:text="约影活动详情"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonback"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:layout_gravity="right|center_vertical"
+            android:layout_row="0"
+            android:background="@drawable/bg_1"
+            android:scaleType="center"
+            android:src="@drawable/jiantou_1" />
+    </GridLayout>
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="top"
+        android:layout_marginBottom="1dp"
+        android:columnCount="1" >
+
+        <ImageView
+            android:id="@+id/iV_distance"
+            android:layout_width="100dp"
+            android:layout_gravity="left|top|bottom"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/u55_normal" />
+
+        <TextView
+            android:id="@+id/tvIsConnected"
+            android:layout_width="fill_parent"
+            android:layout_column="0"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="0"
+            android:text="最近的我最远的你"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_column="0"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_row="0"
+            android:text="她距离我2100米"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="45dp"
+            android:layout_row="0"
+            android:text="22岁"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/gps_latitude"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="45dp"
+            android:layout_row="0"
+            android:text="女生"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="0"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="45dp"
+            android:layout_row="0"
+            android:background="@drawable/girl"
+            android:scaleType="fitXY"
+            android:src="@drawable/girl" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_column="0"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="40dp"
+            android:layout_row="0"
+            android:text="喜剧、爱情"
+            android:textColor="#FFFFFF" />
+
+    </GridLayout>
+    <ScrollView android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_weight="1">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="1dp" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="影片信息"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <GridLayout
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:columnCount="1" >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="UME影院"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_marginTop="60dp"
+                    android:layout_row="0"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="5月30日晚7:30"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_column="0"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_row="0"
+                    android:text="海淀区"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_column="0"
+                    android:layout_gravity="left|top"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_row="0"
+                    android:text="发起者有票，请客"
+                    android:textColor="#FFFFFF" />
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:alpha="0.2"
+                    android:background="#FFFFFF" >
+
+                </TableLayout>
+
+            </GridLayout>
+
+             <TextView
+                 android:id="@+id/textView4"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp"
+                 android:layout_marginTop="10dp"
+                 android:text="TA对你的期望"
+                 android:textColor="#FFFFFF"
+                 android:textSize="20sp" />
+
+            <GridLayout
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:columnCount="1" >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="年龄：20-30岁之间"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="30dp"
+                    android:layout_row="0"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="性别：不限"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_column="0"
+                    android:layout_gravity="left|top"
+                    android:layout_marginTop="60dp"
+                    android:layout_row="0"
+                    android:paddingLeft="20dp"
+                    android:text="PS：最好是中科院的同学~请按时守约"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:alpha="0.2"
+                    android:background="#FFFFFF" >
+
+                </TableLayout>
+
+            </GridLayout>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="重新编辑"
+                android:textColor="#FFFFFF" />
+
+        </TableLayout>
+
+    </ScrollView>
+</TableLayout>

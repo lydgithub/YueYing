@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="top"
+        android:background="@drawable/bg_1"
+        android:columnCount="1" >
+
+        <TextView
+            android:id="@+id/textViewtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_row="0"
+            android:text="消息"
+            android:textColor="#FFFFFFFF"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn_location"
+            android:layout_width="100dp"
+            android:layout_column="0"
+            android:layout_gravity="right|top"
+            android:layout_row="0"
+            android:alpha="1"
+            android:background="@drawable/bg_1"
+            android:text="最近联系人"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+    </GridLayout>
+
+    <cn.ucas.yueying.view.ListViewExt
+                android:id="@+id/managelistView"
+                android:layout_width="match_parent"
+                android:layout_weight="1" >
+
+            </cn.ucas.yueying.view.ListViewExt>
+    
+    <RadioGroup
+        android:id="@+id/main_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_menu"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/nearby_activities"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_nearby_btn_bg"
+            android:button="@null"
+            android:checked="true"
+            android:tag="home" />
+
+        <RadioButton
+            android:id="@+id/find_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_add_btn_bg"
+            android:button="@null"
+            android:tag="cart" />
+
+        <RadioButton
+            android:id="@+id/manage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_massage_btn_bg"
+            android:button="@null"
+            android:tag="personal" />
+
+        <RadioButton
+            android:id="@+id/home"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_home_btn_bg"
+            android:button="@null"
+            android:tag="more" />
+
+    </RadioGroup>
+
+</TableLayout>

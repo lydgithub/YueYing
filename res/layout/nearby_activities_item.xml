@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="260dp" >
+
+    <GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/tv_bg_color"
+        android:columnCount="1" >
+
+        <ImageView
+            android:id="@+id/per_img"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_row="0"
+            android:src="@drawable/u20_normal" />
+
+        <TextView
+            android:id="@+id/view_name"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_column="0"
+            android:layout_gravity="top"
+            android:layout_row="0"
+            android:background="@color/tv_color_deep"
+            android:gravity="bottom"
+            android:paddingLeft="10dp"
+            android:text="沉睡魔咒"
+            android:textColor="#ffffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/per_name"
+            android:layout_column="0"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="40dp"
+            android:layout_row="0"
+            android:text="达人小曼"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_column="0"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="60dp"
+            android:layout_row="0"
+            android:text="23岁"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/seximg"
+            android:layout_width="22dp"
+            android:layout_height="18dp"
+            android:layout_column="0"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="65dp"
+            android:layout_row="0"
+            android:src="@drawable/boy" />
+
+        <TextView
+            android:id="@+id/favorite"
+            android:layout_column="0"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="60dp"
+            android:layout_row="0"
+            android:text="动作 / 冒险"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/ticket"
+            android:layout_column="0"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="85dp"
+            android:layout_row="0"
+            android:text="我请客"
+            android:textSize="15sp"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/invitation"
+            android:layout_column="0"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="85dp"
+            android:layout_row="0"
+            android:text="邀请一位女生"
+            android:textSize="15sp"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_column="0"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="110dp"
+            android:layout_row="0"
+            android:text="时间："
+            android:textSize="15sp"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/where"
+            android:layout_column="0"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="140dp"
+            android:layout_row="0"
+            android:textSize="15sp"
+            android:text="地点："
+            android:textColor="#FFFFFFFF" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="215dp"
+            android:layout_row="0"
+            android:src="@drawable/heart_red"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/visi_num"
+            android:layout_column="0"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="210dp"
+            android:layout_row="0"
+            android:text="62"
+            android:textSize="15sp"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/reg_num"
+            android:layout_column="0"
+            android:layout_gravity="right"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="210dp"
+            android:layout_row="0"
+            android:textSize="15sp"
+            android:text="已有23人报名"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/tV_Juli"
+            android:layout_column="0"
+            android:layout_gravity="left"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="140dp"
+            android:layout_row="0"
+            android:text="距离:200米"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/moreimg"
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:layout_column="0"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="220dp"
+            android:layout_row="0"
+            android:src="@drawable/jiantou_2" />
+
+        <ImageView
+            android:id="@+id/iV_distance"
+            android:layout_width="24dp"
+            android:layout_height="18dp"
+            android:layout_column="0"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="147dp"
+            android:layout_row="0"
+            android:src="@drawable/distence" />
+
+        <TextView
+            android:id="@+id/time_num"
+            android:layout_column="0"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="110dp"
+            android:layout_row="0"
+            android:text="6月22日 19:15"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_column="0"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="140dp"
+            android:layout_row="0"
+            android:text="五道口影院"
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="160dp"
+            android:layout_row="0"
+            android:text="说明："
+            android:textColor="#FFFFFFFF" />
+
+        <TextView
+            android:id="@+id/explain"
+            android:layout_column="0"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="160dp"
+            android:layout_row="0"
+            android:text="诚邀卡哇伊单身美眉"
+            android:textColor="#FFFFFFFF" />
+
+    </GridLayout>
+
+</RelativeLayout>

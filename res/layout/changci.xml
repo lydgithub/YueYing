@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="top"
+        android:background="@drawable/bg_1"
+        android:columnCount="1"
+        android:rowCount="1" >
+        <Button
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:alpha="1"
+            android:background="@drawable/bg_1"
+            android:text="返回"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="center"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:text="场次选择"
+            android:textColor="#FFFFFFFF"
+            android:textSize="25sp" />
+ 
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3" >
+
+        <TextView
+            android:id="@+id/gps_longitude"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:text="五道口影院"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/gps_latitude"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:text="海淀区成府路23号"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:text="距离：200m"
+            android:textColor="#FFFFFFFF"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="2"
+            android:layout_rowSpan="1"
+            android:src="@drawable/fengexian" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="1" >
+
+        <Button
+            android:id="@+id/btn_location"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_height="30dp"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:background="@color/tv_bg_color"
+            android:text="今天6月21日"
+            android:textColor="#FFFFFFFF" />
+
+        <Button
+            android:id="@+id/button2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_height="40dp"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:text="6月22日"
+            android:textColor="#FFFFFFFF" />
+
+    </GridLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/tv_bg_color"
+        android:columnCount="4"
+        android:rowCount="2" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:text="10:25"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:text="至12:30"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="英语3D"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_column="2"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="53元"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/xuanze"
+            android:layout_column="3"
+            android:layout_columnSpan="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="选择"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/tv_bg_color"
+        android:columnCount="4"
+        android:rowCount="2" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:text="12:30"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:text="至14:35"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="英语3D"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_column="2"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="53元"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/xuanze"
+            android:layout_column="3"
+            android:layout_columnSpan="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="选择"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/tv_bg_color"
+        android:columnCount="4"
+        android:rowCount="2" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:text="14:00"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:text="至16:05"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="英语3D"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_column="2"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="53元"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/xuanze"
+            android:layout_column="3"
+            android:layout_columnSpan="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="选择"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/tv_bg_color"
+        android:columnCount="4"
+        android:rowCount="2" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:text="18:25"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:text="至20:30"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="英语3D"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_column="2"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="53元"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/xuanze"
+            android:layout_column="3"
+            android:layout_columnSpan="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="选择"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/tv_bg_color"
+        android:columnCount="4"
+        android:rowCount="2" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:text="20:50"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:text="至22:55"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="英语3D"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_column="2"
+            android:layout_columnSpan="1"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="53元"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/xuanze"
+            android:layout_column="3"
+            android:layout_columnSpan="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:text="选择"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+    </GridLayout>
+</LinearLayout>
+    </ScrollView>
+</TableLayout>
