@@ -153,6 +153,7 @@ public class Add_Activity extends Activity {
 			}
 		};
 
+		//开启获取GPS位置线程
 		new Thread(webreq).start();
 		
 		
@@ -199,7 +200,7 @@ public class Add_Activity extends Activity {
 	  			// TODO Auto-generated method stub
 			
 			 getCity();
-			 
+			 //获取消息后，向系统发送获取成功消息
 			 Message message = new Message();
 	          message.what=1;
 	          handler.sendMessage(message);
