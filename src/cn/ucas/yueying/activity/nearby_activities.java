@@ -2,12 +2,13 @@ package cn.ucas.yueying.activity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+import java.util.Map.Entry;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -25,6 +26,8 @@ import android.widget.Toast;
 import cn.ucas.yueying.R;
 import cn.ucas.yueying.application.MyApplication;
 import cn.ucas.yueying.network.ConnectionDetector;
+import cn.ucas.yueying.network.get_nearby_activities;
+import cn.ucas.yueying.network.imageBitmap;
 import cn.ucas.yueying.view.FooterView;
 import cn.ucas.yueying.view.HeaderView;
 import cn.ucas.yueying.view.ListViewExt;
@@ -213,15 +216,13 @@ public class nearby_activities extends Activity {
 			SimpleAdapter huodongAdapter = new SimpleAdapter(this,
 					myapplication.getHuodongList(),
 					R.layout.nearby_activities_item, new String[] {
-							"view_name", "per_img", "per_name", "seximg",
-							"age", "favorite", "ticket", "invitation",
-							"time_num", "place", "explain", "heart",
-							"visi_num", "reg_num" }, new int[] {
+							"filmName", "photoUrl", "name", "gentle",
+							"age", "filmType", "style", "partnerGentle",
+							"startTime", "cinemaName", "expectation"}, new int[] {
 							R.id.view_name, R.id.per_img, R.id.per_name,
 							R.id.seximg, R.id.age, R.id.favorite, R.id.ticket,
 							R.id.invitation, R.id.time_num, R.id.place,
-							R.id.explain, R.id.heart, R.id.visi_num,
-							R.id.reg_num });
+							R.id.explain});
 			huodonglistview.setAdapter(huodongAdapter);
 
 			huodonglistview.setOnItemClickListener(new OnItemClickListener() {
@@ -393,53 +394,43 @@ public class nearby_activities extends Activity {
 		myapplication = (MyApplication) getApplication();
 		int allpage = myapplication.getNearby_activities_allpage();
 
-		if (page == 1) { // 第一次加载或者刷新调用此方法
+		if (page == 1) {                             //第一次加载或者刷新调用此方法
 			myapplication.huodongList.clear();
-			ArrayList<HashMap<String, Object>> huodongmap = myapplication
-					.getHuodongList();
-			HashMap<String, Object> map1 = new HashMap<String, Object>();
-			map1.put("view_name", "沉睡魔咒");
-			map1.put("per_img", R.drawable.u20_normal);
-			map1.put("per_name", "电影达人小曼");
-			map1.put("seximg", R.drawable.boy);
-			map1.put("age", "23岁");
-			map1.put("favorite", "动作 冒险");
-			map1.put("ticket", "我请客");
-			map1.put("invitation", "邀请1名女生");
-			map1.put("time_num", "6月22日 19:15");
-			map1.put("place", "五道口影院");
-			map1.put("explain", "诚邀卡哇伊单身美眉");
-			map1.put("heart", R.drawable.heart_red);
-			map1.put("visi_num", "62");
-			map1.put("reg_num", "已有23人报名");
-
-			HashMap<String, Object> map2 = new HashMap<String, Object>();
-			map2.put("view_name", "哥斯拉");
-			map2.put("per_img", R.drawable.bdl);
-			map2.put("per_name", "布达拉佩斯的雪橇");
-			map2.put("seximg", R.drawable.girl);
-			map2.put("age", "21岁");
-			map2.put("favorite", "爱情 悬疑");
-			map2.put("ticket", "AA");
-			map2.put("invitation", "邀请1名男生");
-			map2.put("time_num", "6月22日 18:25");
-			map2.put("place", "五道口影院");
-			map2.put("explain", "诚邀大叔");
-			map2.put("heart", R.drawable.heart_red);
-			map2.put("visi_num", "620");
-			map2.put("reg_num", "已有2300人报名");
-			huodongmap.add(map1);
-			huodongmap.add(map2);
-
-			// 将数据存入到全局变量中
-			myapplication.setHuodongList(huodongmap);
-			myapplication.setNearby_activities_flash(1);
-			Message message = new Message();
-			message.what = 1;
-			handler.sendMessage(message);
-			System.out.println("刷新完成");
-
-		} else { // 加载更多时调用此方法
+		    imageBitmap imgbit=new imageBitmap();
+		    get_nearby_activities get_nearby=new get_nearby_activities();
+		    HashMap<String, Object> map=get_nearby.get_nearby_activities_list(1, 1, 1);
+		    //allpage=newslist.allpage;
+		    //myapplication.setNewsallpage(allpage);
+		    
+		    ArrayList<HashMap<String, Object>> huodongList=myapplication.huodongList;
+			   
+		    for(Entry<String, Object> entry : map.entrySet()){
+				
+		    HashMap<String,Object> item=new HashMap<String, Object>();
+		    item=(HashMap<String, Object>) entry.getValue();
+		    String filmpath=item.get("filmUrl").toString();
+		    Bitmap filmimgpath=imgbit.getBitmap(filmpath);
+			item.remove("filmUrl");
+			item.put("filmUrl", filmimgpath);
+			
+			
+			String photopath=item.get("photoUrl").toString();
+		    Bitmap photoimgpath=imgbit.getBitmap(photopath);
+			item.remove("photoUrl");
+			item.put("photoUrl", photoimgpath);
+			huodongList.add((HashMap<String, Object>) map.get(entry.getKey()));
+			}
+		    
+		  //将数据存入到全局变量中
+		  myapplication.setHuodongList(huodongList);  
+		  myapplication.setNearby_activities_flash(1);
+		  Message message = new Message();
+          message.what=1;
+          handler.sendMessage(message);
+          System.out.println("刷新完成");
+		    
+		    
+		    } else { // 加载更多时调用此方法
 
 			if (page > allpage) { // 判断要加载的页码，如果大于总页码，则停止加载
 
@@ -447,54 +438,40 @@ public class nearby_activities extends Activity {
 				message.what = 3;
 				handler.sendMessage(message);
 
-			} else { // 如果不大于总页码，则开始加载
-				ArrayList<HashMap<String, Object>> huodongmap = myapplication
-						.getHuodongList();
-				HashMap<String, Object> map1 = new HashMap<String, Object>();
-
-				map1.put("view_name", "沉睡魔咒");
-				map1.put("per_img", R.drawable.u20_normal);
-				map1.put("per_name", "电影达人小曼");
-				map1.put("seximg", R.drawable.boy);
-				map1.put("age", "23岁");
-				map1.put("favorite", "动作 冒险");
-				map1.put("ticket", "我请客");
-				map1.put("invitation", "邀请1名女生");
-				map1.put("time_num", "6月22日 19:15");
-				map1.put("place", "五道口影院");
-				map1.put("explain", "诚邀卡哇伊单身美眉");
-				map1.put("heart", R.drawable.heart_red);
-				map1.put("visi_num", "62");
-				map1.put("reg_num", "已有23人报名");
-
-				HashMap<String, Object> map2 = new HashMap<String, Object>();
-				map2.put("view_name", "哥斯拉");
-				map2.put("per_img", R.drawable.bdl);
-				map2.put("per_name", "布达拉佩斯的雪橇");
-				map2.put("seximg", R.drawable.girl);
-				map2.put("age", "21岁");
-				map2.put("favorite", "爱情 悬疑");
-				map2.put("ticket", "AA");
-				map2.put("invitation", "邀请1名男生");
-				map2.put("time_num", "6月22日 18:25");
-				map2.put("place", "五道口影院");
-				map2.put("explain", "诚邀大叔");
-				map2.put("heart", R.drawable.heart_red);
-				map2.put("visi_num", "620");
-				map2.put("reg_num", "已有2300人报名");
-
-				huodongmap.add(map1);
-				huodongmap.add(map2);
-
-				// 将数据存入到全局变量中
-				myapplication.setHuodongList(huodongmap);
-				myapplication.setNearby_activities_flash(1);
-				Message message = new Message();
-				message.what = 2;
-				handler.sendMessage(message);
-				System.out.println("加载更多完成");
-
-			}
+			} else {                  //如果不大于总页码，则开始加载
+	    		imageBitmap imgbit=new imageBitmap();
+			    get_nearby_activities get_nearby=new get_nearby_activities();
+			    HashMap<String, Object> map=get_nearby.get_nearby_activities_list(1, 1, 1);
+	    		ArrayList<HashMap<String, Object>> huodongList=myapplication.huodongList;
+	  		   
+	 		    for(Entry<String, Object> entry : map.entrySet()){
+	 				
+	 		    HashMap<String,Object> item=new HashMap<String, Object>();
+	 		    item=(HashMap<String, Object>) entry.getValue();
+	 		   String filmpath=item.get("filmUrl").toString();
+			    Bitmap filmimgpath=imgbit.getBitmap(filmpath);
+				item.remove("filmUrl");
+				item.put("filmUrl", filmimgpath);
+				
+				
+				String photopath=item.get("photoUrl").toString();
+			    Bitmap photoimgpath=imgbit.getBitmap(photopath);
+				item.remove("photoUrl");
+				item.put("photoUrl", photoimgpath);
+	 			huodongList.add((HashMap<String, Object>) map.get(entry.getKey()));
+	 			}
+	 		    
+	 		  //将数据存入到全局变量中
+	 		    myapplication.setHuodongList(huodongList);
+	 		    myapplication.setNearby_activities_flash(1);
+	 		    Message message = new Message();
+	            message.what=2;
+	            handler.sendMessage(message);
+	            System.out.println("加载更多完成");
+	    		
+	    		
+	    		
+	    	}
 
 		}
 

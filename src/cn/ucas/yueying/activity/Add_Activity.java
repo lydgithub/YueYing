@@ -38,8 +38,7 @@ public class Add_Activity extends Activity {
 	RadioButton bt_manage;
 	RadioButton bt_home;
 	MyApplication myapplication;
-	double latitude;
-	double longitude;
+	
 	TextView tv1;
 	Handler handler;
 
@@ -50,8 +49,7 @@ public class Add_Activity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.add_activity);// 发起活动
-		openGPSSettings();
-		getLocation();
+		
 		
 
 		tv1 = (TextView) this.findViewById(R.id.textView6);
@@ -153,6 +151,7 @@ public class Add_Activity extends Activity {
 			}
 		};
 
+		//开启获取GPS位置线程
 		new Thread(webreq).start();
 		
 		
@@ -199,7 +198,7 @@ public class Add_Activity extends Activity {
 	  			// TODO Auto-generated method stub
 			
 			 getCity();
-			 
+			 //获取消息后，向系统发送获取成功消息
 			 Message message = new Message();
 	          message.what=1;
 	          handler.sendMessage(message);
@@ -210,82 +209,11 @@ public class Add_Activity extends Activity {
 	
 	
 	
-	private void openGPSSettings() {
-		LocationManager alm = (LocationManager) this
-				.getSystemService(Context.LOCATION_SERVICE);
-		if (alm.isProviderEnabled(android.location.LocationManager.GPS_PROVIDER)) {
-			Toast.makeText(this, "GPS模块正常", Toast.LENGTH_SHORT).show();
-			return;
-		}
-
-		Toast.makeText(this, "请开启GPS！", Toast.LENGTH_SHORT).show();
-		Intent intent = new Intent(Settings.ACTION_SECURITY_SETTINGS);
-		startActivityForResult(intent, 0); // 此为设置完成后返回到获取界面
-
-	}
-
-	private final LocationListener locationListener = new LocationListener() {
-		public void onLocationChanged(Location location) { // 当坐标改变时触发此函数，如果Provider传进相同的坐标，它就不会被触发
-			// log it when the location changes
-			if (location != null) {
-				System.out.println("Location changed : Lat: "
-						+ location.getLatitude() + " Lng: "
-						+ location.getLongitude());
-			}
-		};
-
-		public void onProviderDisabled(String provider) {
-			// Provider被disable时触发此函数，比如GPS被关闭
-		}
-
-		public void onProviderEnabled(String provider) {
-			// Provider被enable时触发此函数，比如GPS被打开
-		}
-
-		public void onStatusChanged(String provider, int status, Bundle extras) {
-			// Provider的转态在可用、暂时不可用和无服务三个状态直接切换时触发此函数
-		}
-	};
-
-	private void getLocation() {
-		// 获取位置管理服务
-		LocationManager locationManager;
-		String serviceName = Context.LOCATION_SERVICE;
-		locationManager = (LocationManager) this.getSystemService(serviceName);
-		// 查找到服务信息
-		Criteria criteria = new Criteria();
-		criteria.setAccuracy(Criteria.ACCURACY_FINE); // 高精度
-		criteria.setAltitudeRequired(false);
-		criteria.setBearingRequired(false);
-		criteria.setCostAllowed(true);
-		criteria.setPowerRequirement(Criteria.POWER_LOW); // 低功耗
-
-		String provider = locationManager.getBestProvider(criteria, true); // 获取GPS信息
-		Location location = locationManager.getLastKnownLocation(provider); // 通过GPS获取位置
-		updateToNewLocation(location);
-
-		// 设置监听器，自动更新的最小时间为间隔N秒(1秒为1*1000，这样写主要为了方便)或最小位移变化超过N米
-		locationManager.requestLocationUpdates(provider, 1 * 1000, 500,
-				locationListener);
-	}
-
-	private void updateToNewLocation(Location location) {
-
-		tv1 = (TextView) this.findViewById(R.id.textView6);
-		if (location != null) {
-			latitude = location.getLatitude();
-			longitude = location.getLongitude();
-			tv1.setText("维度：" + latitude + "\n经度：" + longitude);
-		} else {
-			tv1.setText("无法获取地理信息");
-		}
-
-	}
-
+	
 	private void getCity() {
 		String key = "JUKBZ-24NWJ-7VVFK-KDKT5-RQ3AF-NRFWP";
 		String url = "http://apis.map.qq.com/ws/geocoder/v1/?location="
-				+ latitude + "," + longitude + "&key=" + key + "&get_poi=1";
+				+ myapplication.getLatitude() + "," + myapplication.getLongitude() + "&key=" + key + "&get_poi=1";
 		HttpUtil httputil = new HttpUtil();
 		HttpGet request = httputil.getHttpGet(url);
 		myapplication=(MyApplication)getApplication();
