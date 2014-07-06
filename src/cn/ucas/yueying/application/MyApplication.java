@@ -15,6 +15,25 @@ public class MyApplication extends Application {
 
 	String city;// 通过坐标获取城市名
 
+	double latitude;//经度
+	double longitude; //纬度
+	
+	public double getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
+
 	public ArrayList<HashMap<String, Object>> huodongList = new ArrayList<HashMap<String, Object>>();
 
 	public ArrayList<HashMap<String, Object>> manageList = new ArrayList<HashMap<String, Object>>();
